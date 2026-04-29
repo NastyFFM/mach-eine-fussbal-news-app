@@ -1,0 +1,22 @@
+{
+  "name": "mach eine fussbal news app",
+  "icon": "M",
+  "color": "#1a2a3a",
+  "description": "zeige aktuelle fussballnews an und lass suchen fnden und browsen",
+  "inputs": [
+    {
+      "id": "data",
+      "desc": "Beliebige Daten empfangen"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "state",
+      "desc": "Aktueller App-Zustand"
+    }
+  ],
+  "dataFiles": [
+    "state"
+  ],
+  "pulseSubscriptions": []
+}
