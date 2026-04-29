@@ -5,14 +5,15 @@
 - Folder: /Users/chris.pohl/Documents/GitHub/mach-eine-fussbal-news-app
 - Created: 2026-04-29
 - Template: frontend
-- GitHub: not published yet
-- Live URL: not deployed yet
+- GitHub: https://github.com/NastyFFM/mach-eine-fussbal-news-app
+- Live URL: https://nastyffm.github.io/mach-eine-fussbal-news-app/
+- Deployed: 2026-04-29 via GitHub Pages
 
 ## Features
 
 | Feature | Branch | Status | Refined | Plan | Progress | Review | Deployed |
 |---------|--------|--------|---------|------|----------|--------|----------|
-| Initial MVP | main | [x] implemented | [x] | [x] | [x] | [ ] | [ ] |
+| Initial MVP | main | [x] deployed | [x] | [x] | [x] | [ ] | [x] |
 
 ## Description
 zeige aktuelle fussballnews an und lass suchen finden und browsen
