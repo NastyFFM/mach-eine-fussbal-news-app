@@ -1,18 +1,22 @@
 {
-  "name": "mach eine fussbal news app",
-  "icon": "M",
-  "color": "#1a2a3a",
-  "description": "zeige aktuelle fussballnews an und lass suchen fnden und browsen",
+  "name": "Fussball News",
+  "icon": "F",
+  "color": "#16a34a",
+  "description": "Aktuelle Fussball-News aus mehreren Quellen — durchsuchbar, filterbar, browsbar.",
   "inputs": [
     {
       "id": "data",
-      "desc": "Beliebige Daten empfangen"
+      "desc": "Suchbegriff oder Filter von anderem Node"
     }
   ],
   "outputs": [
     {
       "id": "state",
-      "desc": "Aktueller App-Zustand"
+      "desc": "Aktueller App-Zustand (Quellen, Query)"
+    },
+    {
+      "id": "selected-article",
+      "desc": "Vom Nutzer angeklickter Artikel {title, link, source, pubDate}"
     }
   ],
   "dataFiles": [

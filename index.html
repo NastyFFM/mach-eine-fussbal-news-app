@@ -3,43 +3,495 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mach eine fussbal news app</title>
+<title>Fussball News</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#0d0d14; color:#e0e0e0; padding:20px; min-height:100vh; }
-h1 { font-size:20px; margin-bottom:8px; }
-p { color:#888; font-size:13px; margin-bottom:20px; }
-.card { background:#1a1a2e; border-radius:8px; padding:16px; margin-bottom:12px; border:1px solid #2a2a3e; }
-button { background:#4ecdc4; color:#0d0d14; border:none; padding:8px 16px; border-radius:6px; cursor:pointer; font-weight:600; }
-button:hover { opacity:0.9; }
-input, textarea { width:100%; padding:8px; background:#13131f; border:1px solid #2a2a3e; border-radius:6px; color:#e0e0e0; font-size:13px; margin-bottom:8px; }
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --bg-card-hover: #1f2630;
+  --text: #c9d1d9;
+  --text-dim: #8b949e;
+  --teal: #16a34a;
+  --teal-dim: #0e7a36;
+  --border: #30363d;
+  --accent: #22c55e;
+  --error: #f85149;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+body { min-height: 100vh; padding: 16px; padding-bottom: 80px; }
+
+/* Header */
+.header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.header h1 { font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.header h1::before { content: "⚽"; font-size: 24px; }
+.refresh-btn { background: var(--teal); color: #fff; border: 0; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 6px; transition: background 0.15s; }
+.refresh-btn:hover { background: var(--accent); }
+.refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.refresh-btn .spin { display: inline-block; transition: transform 0.4s; }
+.refresh-btn.loading .spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Search */
+.search-row { margin-bottom: 12px; position: relative; }
+.search-row input { width: 100%; padding: 12px 14px 12px 38px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 14px; outline: none; transition: border-color 0.15s; }
+.search-row input:focus { border-color: var(--teal); }
+.search-row::before { content: "🔍"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 14px; opacity: 0.6; }
+.search-clear { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: transparent; border: 0; color: var(--text-dim); cursor: pointer; font-size: 18px; padding: 4px 8px; display: none; }
+.search-clear.visible { display: block; }
+
+/* Source chips */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.chip { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-dim); padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 12px; user-select: none; transition: all 0.15s; }
+.chip:hover { background: var(--bg-card-hover); }
+.chip.active { background: var(--teal); border-color: var(--teal); color: #fff; }
+
+/* Status bar */
+.status-bar { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; min-height: 18px; }
+
+/* Articles grid */
+.articles { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+.article { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: all 0.15s; display: flex; flex-direction: column; }
+.article:hover { background: var(--bg-card-hover); border-color: var(--teal); transform: translateY(-2px); }
+.article-thumb { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--teal-dim), #0d4a22); object-fit: cover; display: block; }
+.article-thumb-placeholder { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--teal-dim), #0d4a22); display: flex; align-items: center; justify-content: center; font-size: 40px; }
+.article-body { padding: 14px; display: flex; flex-direction: column; flex: 1; }
+.article-title { font-size: 15px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; color: var(--text); }
+.article-desc { font-size: 13px; color: var(--text-dim); line-height: 1.45; margin-bottom: 10px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.article-meta { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-dim); margin-top: auto; gap: 8px; }
+.article-source { background: rgba(22, 163, 74, 0.15); color: var(--accent); padding: 3px 8px; border-radius: 6px; font-weight: 600; }
+
+/* Skeleton loader */
+.skeleton { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.skel-thumb { aspect-ratio: 16/9; background: linear-gradient(90deg, var(--bg-card) 0%, var(--bg-card-hover) 50%, var(--bg-card) 100%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+.skel-body { padding: 14px; }
+.skel-line { height: 12px; background: var(--bg-card-hover); border-radius: 4px; margin-bottom: 8px; animation: shimmer 1.5s infinite; background: linear-gradient(90deg, var(--bg-card) 0%, var(--bg-card-hover) 50%, var(--bg-card) 100%); background-size: 200% 100%; }
+.skel-line.short { width: 60%; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+/* Empty / error state */
+.message { text-align: center; padding: 48px 16px; color: var(--text-dim); }
+.message h3 { color: var(--text); margin-bottom: 8px; font-size: 16px; }
+.message p { font-size: 13px; margin-bottom: 16px; }
+.message button { background: var(--teal); color: #fff; border: 0; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.message button:hover { background: var(--accent); }
+.message.error h3 { color: var(--error); }
+
+/* Backup buttons */
+.backup-bar { position: fixed; bottom: 8px; right: 8px; display: flex; gap: 4px; opacity: 0.5; z-index: 100; transition: opacity 0.2s; }
+.backup-bar:hover { opacity: 1; }
+.backup-bar button { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-dim); padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 10px; }
+.backup-bar button:hover { background: var(--bg-card-hover); color: var(--text); }
+
+/* Mobile */
+@media (max-width: 600px) {
+  body { padding: 12px; padding-bottom: 80px; }
+  .header h1 { font-size: 18px; }
+  .articles { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
-<h1>mach eine fussbal news app</h1>
-<p>zeige aktuelle fussballnews an und lass suchen fnden und browsen</p>
-<div class="card">
-  <p>Diese App wurde mit dem PulseOS App-Builder erstellt.</p>
-  <p style="margin-top:8px;">Bearbeite <code>apps/mach-eine-fussbal-news-app/index.html</code> um sie anzupassen.</p>
-</div>
-<script>
-// PulseOS SDK (automatisch verfuegbar):
-// PulseOS.saveState(data)     - Zustand speichern (PUT /app/mach-eine-fussbal-news-app/api/state)
-// PulseOS.loadState()         - Zustand laden (GET /app/mach-eine-fussbal-news-app/api/state)
-// PulseOS.emit(name, data)    - Output an Graph senden
-// PulseOS.onInput(name, cb)   - Input von Graph empfangen
-// PulseOS.onDataChanged(cb)   - Reagiere auf externe Datenänderungen
-// PulseOS.alert(msg)          - Zeige Alert in Agent-Bar
 
-// Graph-Integration: Empfange Daten von anderen Apps
-if (window.PulseOS) {
-  PulseOS.onInput('data', function(incoming) {
-    console.log('Received graph input:', incoming);
-  });
-  PulseOS.onDataChanged(function() {
-    console.log('Data changed externally, reloading...');
+<div class="header">
+  <h1>Fussball News</h1>
+  <button class="refresh-btn" id="refreshBtn" title="Neu laden">
+    <span class="spin">↻</span>
+    <span>Aktualisieren</span>
+  </button>
+</div>
+
+<div class="search-row">
+  <input type="text" id="searchInput" placeholder="Suche in Schlagzeilen... (z.B. Bayern, Champions League)" autocomplete="off">
+  <button class="search-clear" id="searchClear" title="Loeschen">×</button>
+</div>
+
+<div class="chips" id="chips"></div>
+
+<div class="status-bar" id="statusBar"></div>
+
+<div id="content"></div>
+
+<div class="backup-bar">
+  <button onclick="downloadBackup()" title="Backup herunterladen">Export</button>
+  <button onclick="uploadBackup()" title="Backup hochladen">Import</button>
+</div>
+
+<script src="/sdk.js"></script>
+<script>
+const APP_ID = 'mach-eine-fussbal-news-app';
+const STORAGE_KEY = 'pulseos-app-' + APP_ID;
+const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+const SOURCES = [
+  { id: 'bbc',      name: 'BBC Sport',   url: 'https://feeds.bbci.co.uk/sport/football/rss.xml' },
+  { id: 'sky',      name: 'Sky Sports',  url: 'https://www.skysports.com/rss/12040' },
+  { id: 'guardian', name: 'Guardian',    url: 'https://www.theguardian.com/football/rss' },
+  { id: 'espn',     name: 'ESPN',        url: 'https://www.espn.com/espn/rss/soccer/news' },
+  { id: 'goal-de',  name: 'Goal (DE)',   url: 'https://www.goal.com/de/feeds/news?fmt=rss' }
+];
+
+const state = {
+  sources: new Set(SOURCES.map(s => s.id)),
+  query: '',
+  cache: [],
+  lastFetch: null
+};
+
+const $ = id => document.getElementById(id);
+const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const stripHtml = s => String(s ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+function debounce(fn, ms) {
+  let t; return function(...args) { clearTimeout(t); t = setTimeout(() => fn.apply(this, args), ms); };
+}
+
+function formatDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d)) return '';
+  const diff = (Date.now() - d.getTime()) / 1000;
+  if (diff < 60) return 'gerade eben';
+  if (diff < 3600) return Math.floor(diff/60) + ' Min';
+  if (diff < 86400) return Math.floor(diff/3600) + ' Std';
+  if (diff < 604800) return Math.floor(diff/86400) + ' Tg';
+  return d.toLocaleDateString('de-DE', { day: '2-digit', month: 'short' });
+}
+
+async function saveData() {
+  const data = {
+    sources: Array.from(state.sources),
+    query: state.query,
+    cache: state.cache.slice(0, 100),
+    lastFetch: state.lastFetch
+  };
+  try {
+    const r = await fetch('/app/' + APP_ID + '/api/state', {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+    });
+    if (r.ok) return;
+  } catch (e) { /* fallthrough */ }
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) { /* quota */ }
+}
+
+async function loadData() {
+  try {
+    const r = await fetch('/app/' + APP_ID + '/api/state');
+    if (r.ok) {
+      const d = await r.json();
+      if (d && (d.sources || d.cache)) return d;
+    }
+  } catch (e) { /* fallthrough */ }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { return {}; }
+}
+
+function renderChips() {
+  $('chips').innerHTML = SOURCES.map(s => `
+    <span class="chip ${state.sources.has(s.id) ? 'active' : ''}" data-id="${s.id}">${escapeHtml(s.name)}</span>
+  `).join('');
+  $('chips').querySelectorAll('.chip').forEach(el => {
+    el.addEventListener('click', () => {
+      const id = el.dataset.id;
+      if (state.sources.has(id)) state.sources.delete(id); else state.sources.add(id);
+      renderChips();
+      saveData();
+      render();
+      if (state.cache.filter(a => state.sources.has(a.sourceId)).length === 0) {
+        fetchAllFeeds();
+      }
+    });
   });
 }
+
+function dedupArticles(arr) {
+  const seen = new Set();
+  return arr.filter(a => {
+    const key = (a.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 80);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function getFiltered() {
+  const q = state.query.trim().toLowerCase();
+  let arr = state.cache.filter(a => state.sources.has(a.sourceId));
+  if (q) {
+    arr = arr.filter(a =>
+      (a.title || '').toLowerCase().includes(q) ||
+      (a.description || '').toLowerCase().includes(q)
+    );
+  }
+  arr.sort((a, b) => new Date(b.pubDate || 0) - new Date(a.pubDate || 0));
+  return arr;
+}
+
+function renderSkeletons() {
+  let html = '<div class="articles">';
+  for (let i = 0; i < 6; i++) {
+    html += `<div class="skeleton">
+      <div class="skel-thumb"></div>
+      <div class="skel-body">
+        <div class="skel-line"></div>
+        <div class="skel-line"></div>
+        <div class="skel-line short"></div>
+      </div>
+    </div>`;
+  }
+  html += '</div>';
+  $('content').innerHTML = html;
+}
+
+function render() {
+  const articles = getFiltered();
+  const status = $('statusBar');
+  if (state.lastFetch) {
+    status.textContent = articles.length + ' Artikel · zuletzt aktualisiert ' + formatDate(state.lastFetch);
+  } else {
+    status.textContent = '';
+  }
+
+  if (state.sources.size === 0) {
+    $('content').innerHTML = `<div class="message">
+      <h3>Keine Quelle ausgewaehlt</h3>
+      <p>Bitte aktiviere mindestens eine Nachrichtenquelle oben.</p>
+    </div>`;
+    return;
+  }
+
+  if (articles.length === 0 && state.cache.length === 0) {
+    $('content').innerHTML = `<div class="message">
+      <h3>Noch keine Artikel</h3>
+      <p>Klick auf "Aktualisieren" um News zu laden.</p>
+      <button onclick="fetchAllFeeds()">Jetzt laden</button>
+    </div>`;
+    return;
+  }
+
+  if (articles.length === 0) {
+    $('content').innerHTML = `<div class="message">
+      <h3>Keine Treffer</h3>
+      <p>Fuer "${escapeHtml(state.query)}" wurde nichts gefunden.</p>
+      <button onclick="clearSearch()">Suche zuruecksetzen</button>
+    </div>`;
+    return;
+  }
+
+  $('content').innerHTML = '<div class="articles">' + articles.map((a, i) => {
+    const desc = stripHtml(a.description).slice(0, 200);
+    const thumb = a.thumbnail
+      ? `<img class="article-thumb" src="${escapeHtml(a.thumbnail)}" alt="" loading="lazy" onerror="this.outerHTML='<div class=\\'article-thumb-placeholder\\'>⚽</div>'">`
+      : `<div class="article-thumb-placeholder">⚽</div>`;
+    return `<article class="article" data-idx="${i}">
+      ${thumb}
+      <div class="article-body">
+        <div class="article-title">${escapeHtml(a.title || 'Ohne Titel')}</div>
+        ${desc ? `<div class="article-desc">${escapeHtml(desc)}</div>` : ''}
+        <div class="article-meta">
+          <span class="article-source">${escapeHtml(a.sourceName)}</span>
+          <span>${formatDate(a.pubDate)}</span>
+        </div>
+      </div>
+    </article>`;
+  }).join('') + '</div>';
+
+  $('content').querySelectorAll('.article').forEach(el => {
+    el.addEventListener('click', () => {
+      const idx = parseInt(el.dataset.idx, 10);
+      const article = articles[idx];
+      if (!article || !article.link) return;
+      if (window.PulseOS && PulseOS.emit) {
+        PulseOS.emit('selected-article', {
+          title: article.title, link: article.link,
+          source: article.sourceName, pubDate: article.pubDate
+        });
+      }
+      window.open(article.link, '_blank', 'noopener');
+    });
+  });
+}
+
+async function fetchFeed(source) {
+  const url = RSS2JSON + encodeURIComponent(source.url);
+  const r = await fetch(url);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const data = await r.json();
+  if (data.status !== 'ok' || !Array.isArray(data.items)) {
+    throw new Error(data.message || 'RSS parse failed');
+  }
+  return data.items.map(it => ({
+    title: it.title || '',
+    description: it.description || '',
+    link: it.link || '',
+    pubDate: it.pubDate || '',
+    thumbnail: it.thumbnail || it.enclosure?.link || '',
+    sourceId: source.id,
+    sourceName: source.name
+  }));
+}
+
+async function fetchAllFeeds() {
+  const btn = $('refreshBtn');
+  btn.classList.add('loading');
+  btn.disabled = true;
+  $('statusBar').textContent = 'Lade News...';
+
+  if (state.cache.length === 0) renderSkeletons();
+
+  const active = SOURCES.filter(s => state.sources.has(s.id));
+  if (active.length === 0) {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+    render();
+    return;
+  }
+
+  const results = await Promise.allSettled(active.map(fetchFeed));
+  const articles = [];
+  const errors = [];
+  results.forEach((res, i) => {
+    if (res.status === 'fulfilled') articles.push(...res.value);
+    else errors.push(active[i].name);
+  });
+
+  if (articles.length === 0) {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+    if (state.cache.length === 0) {
+      $('content').innerHTML = `<div class="message error">
+        <h3>News konnten nicht geladen werden</h3>
+        <p>${errors.length ? 'Fehler bei: ' + escapeHtml(errors.join(', ')) : 'Keine Verbindung zur RSS-Quelle.'}</p>
+        <button onclick="fetchAllFeeds()">Erneut versuchen</button>
+      </div>`;
+    } else {
+      $('statusBar').textContent = 'Konnte nicht aktualisieren — zeige Cache';
+      render();
+    }
+    return;
+  }
+
+  state.cache = dedupArticles(articles);
+  state.lastFetch = new Date().toISOString();
+  await saveData();
+  btn.classList.remove('loading');
+  btn.disabled = false;
+  render();
+}
+
+function clearSearch() {
+  state.query = '';
+  $('searchInput').value = '';
+  $('searchClear').classList.remove('visible');
+  saveData();
+  render();
+}
+
+const onSearchInput = debounce(() => {
+  state.query = $('searchInput').value;
+  $('searchClear').classList.toggle('visible', state.query.length > 0);
+  saveData();
+  render();
+}, 200);
+
+function downloadBackup() {
+  loadData().then(data => {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = APP_ID + '-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+}
+
+function uploadBackup() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json';
+  input.onchange = () => {
+    const file = input.files && input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        saveData.call(null);
+        fetch('/app/' + APP_ID + '/api/state', {
+          method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+        }).catch(() => {
+          try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
+        }).finally(() => location.reload());
+      } catch (e) {
+        alert('Ungueltige Backup-Datei');
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+window.fetchAllFeeds = fetchAllFeeds;
+window.clearSearch = clearSearch;
+window.downloadBackup = downloadBackup;
+window.uploadBackup = uploadBackup;
+
+async function init() {
+  const saved = await loadData();
+  if (saved && saved.sources && Array.isArray(saved.sources) && saved.sources.length > 0) {
+    state.sources = new Set(saved.sources);
+  }
+  if (saved && typeof saved.query === 'string') state.query = saved.query;
+  if (saved && Array.isArray(saved.cache)) state.cache = saved.cache;
+  if (saved && saved.lastFetch) state.lastFetch = saved.lastFetch;
+
+  $('searchInput').value = state.query;
+  $('searchClear').classList.toggle('visible', state.query.length > 0);
+  $('searchInput').addEventListener('input', onSearchInput);
+  $('searchClear').addEventListener('click', clearSearch);
+  $('refreshBtn').addEventListener('click', fetchAllFeeds);
+
+  renderChips();
+  render();
+
+  // Auto-fetch if cache empty or older than 10 min
+  const stale = !state.lastFetch || (Date.now() - new Date(state.lastFetch).getTime() > 10 * 60 * 1000);
+  if (state.cache.length === 0 || stale) {
+    fetchAllFeeds();
+  }
+
+  // PulseOS SDK Integration
+  if (window.PulseOS) {
+    if (PulseOS.onInput) {
+      PulseOS.onInput('data', incoming => {
+        if (typeof incoming === 'string') {
+          state.query = incoming;
+          $('searchInput').value = incoming;
+          $('searchClear').classList.toggle('visible', incoming.length > 0);
+          render();
+        } else if (incoming && typeof incoming.query === 'string') {
+          state.query = incoming.query;
+          $('searchInput').value = incoming.query;
+          render();
+        }
+      });
+    }
+    if (PulseOS.onDataChanged) {
+      PulseOS.onDataChanged(async () => {
+        const fresh = await loadData();
+        if (fresh && Array.isArray(fresh.cache)) {
+          state.cache = fresh.cache;
+          state.lastFetch = fresh.lastFetch;
+          render();
+        }
+      });
+    }
+    if (PulseOS.emit) {
+      PulseOS.emit('state', { sources: Array.from(state.sources), query: state.query });
+    }
+  }
+}
+
+init();
 </script>
 </body>
 </html>

@@ -1,1 +1,283 @@
-{}
+{
+  "sources": [
+    "bbc",
+    "sky",
+    "guardian",
+    "espn",
+    "goal-de"
+  ],
+  "query": "",
+  "cache": [
+    {
+      "title": "A record-breaking semi-final - the antidote to modern football?",
+      "description": "A scintillating semi-final first leg between Paris St-Germain and Bayern Munich left many to wonder if this was the antidote to modern football.",
+      "link": "https://www.bbc.com/sport/football/articles/cp3pd2kgy76o?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-28 23:33:30",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/419f/live/a0105fd0-4348-11f1-a9cc-db8e41811dfd.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Chelsea captain Bright retires - what now for ex-England defender?",
+      "description": "Chelsea captain Millie Bright announces she has retired from football with immediate effect because of injury.",
+      "link": "https://www.bbc.com/sport/football/articles/cvgzd945593o?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 09:31:57",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a89e/live/d8abf460-4318-11f1-8d32-27ce5a537ca2.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "The Europa League winner turned director, actor, DJ and photographer",
+      "description": "Alfie Whiteman picked up a Europa League winner's medal last year, now at 27 he has retired from football and is opening his first photography exhibition.",
+      "link": "https://www.bbc.com/sport/football/articles/c4g519p53l9o?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 05:52:23",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6953/live/b6d1ddc0-4339-11f1-bf93-09326408c82a.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "The Man Utd kids tipped to shine in pre-season",
+      "description": "Which Manchester United youngsters are most likely to be pushing for inclusion on their pre-season tour in July?",
+      "link": "https://www.bbc.com/sport/football/articles/cqjplgg7kywo?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 07:00:49",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2047/live/53ac2a50-432c-11f1-ac78-2112837ce2aa.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Are Celtic &amp; Hearts fans really rooting for their rivals?",
+      "description": "With Hearts out in front, Hibs could do the the Scottish Premiership leaders a favour against Celtic, while the defending champions will hope Rangers can do some damage at Tynecastle.",
+      "link": "https://www.bbc.com/sport/football/articles/crkpmgjvk2zo?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 12:01:00",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cd4f/live/5cec3cc0-43ba-11f1-ac78-2112837ce2aa.png",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Can Griezmann end his Atletico love story in style?",
+      "description": "Antoine Griezmann's long love affair with Atletico Madrid is drawing to a close, but can the Frenchman bid farewell by securing the Champions League?",
+      "link": "https://www.bbc.com/sport/football/articles/c202l6yxvmxo?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 05:07:15",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e116/live/27e8d0b0-4306-11f1-8d32-27ce5a537ca2.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Grealish recovery 'couldn't be looking any better'",
+      "description": "Jack Grealish says his recovery from the operation he had on his season-ending foot injury is going extremely well.",
+      "link": "https://www.bbc.com/sport/football/articles/c3w26nvqne6o?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 08:45:55",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8108/live/f18a0990-4331-11f1-bd52-e755d604ece4.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Tottenham target Rashford - Wednesday's gossip",
+      "description": "Spurs want Marcus Rashford, Anthony Gordon is 'likely' to leave Newcastle and Arsenal are closely monitoring Victor Osimhen, plus more.",
+      "link": "https://www.bbc.com/sport/football/articles/c9q3gn39el7o?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-28 20:53:19",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7d16/live/66a74710-4341-11f1-ac78-2112837ce2aa.png",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Why Mourinho could be Real's 'ultimate wildcard'",
+      "description": "With Real Madrid out of the Champions League, and falling behind in La Liga, noise around manager Alvaro Arbeloa's future is unsurprisingly increasing. Could Jose Mourinho be the answer?",
+      "link": "https://www.bbc.com/sport/football/articles/cy02ny5dxjgo?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-28 18:20:32",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/793b/live/535380d0-431d-11f1-89cc-ff708b4a3776.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "Afghanistan women can return to competition",
+      "description": "Afghanistan women will become a \"symbol of resilience\" after Fifa approved their return to international competition, says former captain Khalida Popal.",
+      "link": "https://www.bbc.com/sport/football/articles/c74rlepjdrgo?at_medium=RSS&at_campaign=rss",
+      "pubDate": "2026-04-29 08:08:14",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6796/live/89291980-439b-11f1-b861-d7bf71119519.jpg",
+      "sourceId": "bbc",
+      "sourceName": "BBC Sport"
+    },
+    {
+      "title": "'You don't see that often!' - Zhao Xintong produces 'amazing' hat-trick shot",
+      "description": "Zhao Xintong produced an incredible 'hat-trick shot' to pot three balls at once during his thrilling quarter-final tie against Shaun Murphy on Tuesday at the World Snooker Championship.",
+      "link": "https://www.skysports.com/snooker/news/12040/13537958/world-snooker-championship-zhao-xintong-leaves-fans-stunned-with-amazing-hat-trick-shot-during-shaun-murphy-clash",
+      "pubDate": "2026-04-29 10:45:00",
+      "thumbnail": "https://e1.365dm.com/26/04/1920x1080/skysports-zhao-xintong_7234040.jpg?20260429114205",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "EFL final day live on Sky: What's still to play for?",
+      "description": "Ipswich, Millwall and Middlesbrough can still reach the Premier League, while Wrexham, Hull and Derby have hopes of getting into the Championship play-offs.",
+      "link": "https://www.skysports.com/football/news/12040/13537951/a-place-in-the-pl-a-title-promotions-relegations-its-all-to-play-for-on-efl-final-day-with-every-game-live-on-sky",
+      "pubDate": "2026-04-29 10:30:00",
+      "thumbnail": "https://e0.365dm.com/26/03/1920x1080/skysports-efl-championship_7194529.jpg?20260316143108",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "Il Etait Temps rules supreme with Punchestown-Cheltenham double",
+      "description": "Il Etait Temps again demonstrated his class as he won at the highest level for the eighth time in adding the William Hill Champion Chase at the Punchestown Festival to his two-mile crown from Cheltenham.",
+      "link": "https://www.skysports.com/racing/news/12040/13537945/il-etait-temps-rules-supreme-with-punchestown-cheltenham-double",
+      "pubDate": "2026-04-29 09:39:00",
+      "thumbnail": "https://e1.365dm.com/26/04/1920x1080/skysports-punchestown-il-etait-temps_7233984.jpg?20260429104726",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "Wembanyama powers Spurs past Trail Blazers and into Western Conference semi-finals",
+      "description": "Victor Wembanyama had 17 points, 14 rebounds and six blocks and the San Antonio Spurs never trailed as they eliminated the Portland Trail Blazers with a 114-95 win on Tuesday night in Game Five of their first-round playoff series.",
+      "link": "https://www.skysports.com/nba/news/12040/13537881/nba-playoffs-victor-wembanyama-powers-san-antonio-spurs-past-portland-trail-blazers-and-into-western-conference-semi-finals",
+      "pubDate": "2026-04-29 07:30:00",
+      "thumbnail": "https://e2.365dm.com/26/04/1920x1080/skysports-victor-wembanyama_7233861.jpg?20260429071007",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "North announces retirement! Relive his ICONIC Lions moment",
+      "description": "Following news that George North will retire at the end of the 2026 season, relive the iconic moment he lifted Australia's Israel Folau off the ground as he tried to tackle him during the second Test match between the sides during the 2013 tour.",
+      "link": "https://www.skysports.com/watch/video/13093964/george-norths-iconic-british-and-irish-lions-moment-lifting-israel-falau-off-the-ground",
+      "pubDate": "2024-03-13 13:13:00",
+      "thumbnail": "https://e0.365dm.com/24/03/1920x1080/skysports-george-north-british-and-irish-lions_6489196.jpg?20240313131635",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "'Impact could be enormous if we get this right' | How soon could we see NRL x SL?",
+      "description": "On The Bench podcast, Kris Radlinski and Karl Fitzpatrick discuss the possibility of the NRL merging with the Super League.",
+      "link": "https://www.skysports.com/watch/video/13537694/impact-could-be-enormous-if-we-get-this-right-how-soon-could-we-see-nrl-x-sl",
+      "pubDate": "2026-04-28 15:37:00",
+      "thumbnail": "https://e2.365dm.com/26/04/1920x1080/skysports-rugby-bench_7233434.jpg?20260428165313",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "Can Korda be women's golf's Tiger? - 'She has the ability to be dominant'",
+      "description": "Nelly Korda \"has the ability to be dominant\" in women's golf after clinching a third major title, says Catriona Matthew.",
+      "link": "https://www.skysports.com/golf/news/12040/13537804/can-nelly-korda-be-tiger-woods-like-force-in-womens-golf-she-has-the-ability-to-be-dominant-says-catriona-matthew",
+      "pubDate": "2026-04-29 06:00:00",
+      "thumbnail": "https://e1.365dm.com/26/04/1920x1080/skysports-nelly-korda-chevron-championship_7233768.jpg?20260428235345",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "Sky Sports Quiz: Which of these sporting stars is under 6ft tall?",
+      "description": "Warm up for an unmissable Big Weekend of sport on Sky Sports with our quiz!",
+      "link": "https://www.skysports.com/football/news/12040/13535331/sky-sports-big-weekend-quiz-premier-league-efl-wsl-formula-1-super-league-and-ipl-trivia-being-tested",
+      "pubDate": "2026-04-29 07:00:00",
+      "thumbnail": "https://e2.365dm.com/26/04/1920x1080/skysports-big-weekend-wta-f1_7231223.jpg?20260426141950",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "15-year-old Sooryavanshi hits INCREDIBLE helicopter shot for six",
+      "description": "Vaibhav Sooryavanshi continues his incredible IPL campaign with a brilliant helicopter shot for six for the Rajasthan Royals.",
+      "link": "https://www.skysports.com/watch/video/13537710/ipl-15-year-old-vaibhav-sooryavanshi-hits-incredible-helicopter-shot-for-six",
+      "pubDate": "2026-04-28 16:14:00",
+      "thumbnail": "https://e1.365dm.com/26/04/1920x1080/skysports-ipl-cricket_7233459.jpg?20260428172103",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "Greaves on making history: 'Three of my best darts ever'",
+      "description": "Beau Greaves has been at the top of the women's darts for a long time and has now made history on the PDC Pro Tour with three of her \"best darts ever\".",
+      "link": "https://www.skysports.com/darts/news/12040/13537935/beau-greaves-reflects-on-making-more-history-as-first-woman-to-win-pdc-ranking-title-three-of-my-best-darts-ever",
+      "pubDate": "2026-04-29 09:05:00",
+      "thumbnail": "https://e1.365dm.com/26/04/1920x1080/skysports-beau-greaves-darts_7234114.jpg?20260429123750",
+      "sourceId": "sky",
+      "sourceName": "Sky Sports"
+    },
+    {
+      "title": "Ashley Cole: ‘The players have to trust what I’m asking them to do’",
+      "description": "\n<p>Former Arsenal, Chelsea and England left-back is in his first manager’s job, with playoff-chasing Serie B side, Cesena</p>\n<p>It has been a long journey for Ashley Cole, but also for his wife, Sharon Canu. It took seven years for Cole to get his <a href=\"https://www.theguardian.com/football/2026/mar/15/ashley-cole-appointed-head-coach-cesena-italy-serie-b\">first job as a head coach, with Cesena in Italy</a>, having retired from playing. During that time, Sharon had to endure many dinner table tactical briefings with salt and pepper shakers. The pair met a decade ago while Cole was playing for Roma – Canu is from Italy – and that period clearly left a lasting mark beyond the pitch. “I bored her a lot,” Cole says, smiling. Now that he has a dugout of his own, Sharon may finally get the seasoning back.</p>\n<p>“It was always in our plans to live in Italy because we love the food and the calmness of the country,” Cole says. “She [Canu] told me the fans here are passionate about their team and their city. I had to embrace that, understand what makes them tick, so we can represent them properly.”</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/ashley-cole-players-trust-first-manager-job-cesena-serie-b\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/ashley-cole-players-trust-first-manager-job-cesena-serie-b",
+      "pubDate": "2026-04-29 11:00:47",
+      "thumbnail": "https://i.guim.co.uk/img/media/9d8a0ddec1732d15f402d9578367244dccc5070c/791_1601_6436_5149/master/6436.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=2a0443e83c5d48450c490ad8aa11fb63",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "‘Pinnacle of art and culture’: Europe’s media on nine-goal PSG-Bayern thriller",
+      "description": "\n<p>Champions League semi-final first leg was described as ‘pure madness’ and ‘football in its finest essence’</p>\n<p>French media were in thrall to a victory hailed as a milestone performance, calling Paris Saint-Germain’s 100th win in the Champions League as “one of the finest” in the club’s history.</p>\n<p>Bayern Munich will be hoping for a repeat of their goal bonanza when they host the holders in the semi-final return leg next Wednesday, with Tuesday’s <a href=\"https://www.theguardian.com/football/2026/apr/28/psg-bayern-munich-champions-league-semi-final-first-leg-match-report\">5-4 loss in Paris</a> breaking the competition record for most goals in a last-four game.</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/psg-bayern-munich-europes-media-nine-goal-thriller-champions-league\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/psg-bayern-munich-europes-media-nine-goal-thriller-champions-league",
+      "pubDate": "2026-04-29 11:00:04",
+      "thumbnail": "https://i.guim.co.uk/img/media/77e31bfe5d96836d845b5bde44069b2e35f2be1b/0_0_5000_4000/master/5000.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=67051b6c555b864d27f87cd8c74b04e1",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "‘I’ve given all I can’: Chelsea’s Millie Bright announces retirement with immediate effect",
+      "description": "\n<ul>\n<li><p>Bright won eight Women’s Super League titles at Chelsea</p></li>\n<li><p>Defender retired from England duty in 2025 with 88 caps</p></li>\n</ul>\n<p>Millie Bright has announced her immediate retirement, ending a trophy-laden career during which she won eight Women’s Super League titles and six Women’s FA Cups with Chelsea.</p>\n<p>The defender, who <a href=\"https://www.theguardian.com/football/2025/oct/13/millie-bright-announces-england-retirement\">retired from international football in 2025</a>, also helped England win the 2022 European Championship on home soil, and in 2023 – in the absence of the injured captain Leah Williamson – led the side to the World Cup final. She won 88 caps.</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/millie-bright-announces-retirement-chelsea-england\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/millie-bright-announces-retirement-chelsea-england",
+      "pubDate": "2026-04-29 09:30:51",
+      "thumbnail": "https://i.guim.co.uk/img/media/3c968d21ef023f73b5f3482dc49bc763ae3fe31d/821_246_4109_3287/master/4109.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=d790bbba1f2c5d8f9eacc4e87b9de2ad",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "Panini football sticker collectors face £1,000 outlay for 48-team World Cup",
+      "description": "\n<ul>\n<li><p>112-page album will require 980 unique stickers to fill</p></li>\n<li><p>Individual packets of seven stickers cost £1.25 in Britain</p></li>\n</ul>\n<p>Soaring prices at the pumps, grocery bills on the rise, and now it seems inflation will be hitting hard the pockets of those football fans for whom no World Cup would be complete without the thrill of opening a packet of Panini stickers.</p>\n<p>Since the Italian company’s first sticker collection at the 1970 World Cup in Mexico, striving to complete the set has been an obsession for young fans around the globe with swapping of “doubles” and the search for rarities mandatory.</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/panini-football-stickers-1000-pounds-48-team-world-cup\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/panini-football-stickers-1000-pounds-48-team-world-cup",
+      "pubDate": "2026-04-29 11:13:19",
+      "thumbnail": "https://i.guim.co.uk/img/media/929f24feb27a31e1187077c4745161fad0530e02/124_0_3750_3000/master/3750.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=689188c0513c9cb95c6bcd483484fecc",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "Classic Football Shirts: inside the vault home to their most valuable vintage gear – video",
+      "description": "\n<p>Classic Football Shirts have been in business for 20 years, selling over one million shirts (so far) and keeping the most iconic match-worn pieces in their temperature-controlled vault. Michael Butler travelled to Manchester to meet the CFS founders</p> <a href=\"https://www.theguardian.com/football/video/2026/apr/29/classic-football-shirts-inside-the-vault-home-to-their-most-valuable-vintage-gear-video\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/video/2026/apr/29/classic-football-shirts-inside-the-vault-home-to-their-most-valuable-vintage-gear-video",
+      "pubDate": "2026-04-29 05:34:20",
+      "thumbnail": "https://i.guim.co.uk/img/media/e17dc376b584ebab43f2eda0249b256d9be85439/0_0_1045_836/master/1045.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=b3b663efe75eb66782adcfe492a93ac3",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "‘I will love it. Love it’: 30 years on from Kevin Keegan’s infamous rant",
+      "description": "\n<p>The then Newcastle manager’s on-air blast at Sir Alex Ferguson remains a classic Premier League moment</p>\n<p>Premier League history is littered with red letter days and Monday 29 April 1996 will for ever rank among the most memorable. Thirty years on, recollections of the aftermath of Newcastle’s 1-0 victory at Leeds remain vivid. Keith Gillespie’s goal saw Kevin Keegan’s team move three points behind the leaders, Manchester United, with two fixtures remaining.</p>\n<p>Before Newcastle’s visit to Elland Road, Sir Alex Ferguson craftily suggested that Leeds and Nottingham Forest – the team Keegan’s players would visit three days later – would not try as hard as they had against his own side. Ferguson also pointedly reminded everyone Newcastle had agreed to provide the opposition for Stuart Pearce’s testimonial by the Trent later in the year. This backdrop dictated that Keegan used a live post-match television interview with Richard Keys and Andy Gray of Sky Sports to claim the moral high ground while also walking straight into Ferguson’s psychological trap.</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/i-will-love-it-love-it-30-years-on-from-kevin-keegans-infamous-rant\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/i-will-love-it-love-it-30-years-on-from-kevin-keegans-infamous-rant",
+      "pubDate": "2026-04-29 07:00:49",
+      "thumbnail": "https://i.guim.co.uk/img/media/38883d25e05324dc06efb77a6ba7d265a8555997/85_0_1730_1384/master/1730.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=50c1e4d5afaa6c617e656bf019e17b80",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "Giuliano Simeone follows in father’s footsteps to his Atlético destiny",
+      "description": "\n<p>Youngest son of Diego Simeone has had to earn his chance but is now making the most of it at the Metropolitano</p>\n<p>At the beginning of the final training session before their biggest game in a decade, Atlético Madrid’s players lined up by the centre circle at the Metropolitano and waited for their coach to come. Diego Simeone arrived and ran through the middle of them, from Juan Musso and Jan Oblak at one end to Antoine Griezmann and Ademola Lookman at the other. As he passed, head down, they cheered and hit him – if not <em>quite</em> as hard as they do when it’s a player’s turn. Gauntlet run, applause echoed round the empty stadium. <em>Happy birthday,</em> <em>mister</em>.</p>\n<p>Simeone turned 56 on Tuesday. He has spent almost 20 of those here: first as the captain who won the double, then the coach who lifted Atlético’s <a href=\"https://www.theguardian.com/football/blog/2014/may/19/atletico-madrid-la-liga-title-impossible\">next league title, 18 years on</a>, and now leads them into his fourth and their seventh European Cup semi-final, nine years since the last. What do you get the man who has it all? “Buah! You can’t imagine how good it is to be in the four best teams in Europe,” he said <a href=\"https://www.theguardian.com/football/2026/apr/14/atletico-madrid-barcelona-champions-league-match-report\">after the quarter-final</a>; “I have no birthday wish,” he said before this semi-final, “just pure gratitude to be able to be with my three sons on my birthday, with my two daughters, my mum, my wife, my lifelong friends.”</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/giuliano-simeone-follows-in-fathers-footsteps-to-his-atletico-destiny\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/giuliano-simeone-follows-in-fathers-footsteps-to-his-atletico-destiny",
+      "pubDate": "2026-04-29 07:00:48",
+      "thumbnail": "https://i.guim.co.uk/img/media/d9ecbbbd069f9dca333a1e59abee86ed478a1847/184_326_3544_2836/master/3544.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=f9940c8577de1bae7755b256efa9128a",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "All World Cup teams poised for tax exemption after Fifa talks with US treasury",
+      "description": "\n<ul>\n<li><p>Teams should now be exempt from US federal taxes </p></li>\n<li><p>Many will still have to pay US state and city tax</p></li>\n</ul>\n<p>Fifa is poised to secure a last-minute tax exemption for all 48 World Cup qualifiers after intensive negotiations with the US treasury.</p>\n<p>After months of lobbying Fifa has secured a significant breakthrough that should result in the national associations being exempt from federal taxes, although many will still have to pay state and city tax on their World Cup earnings.</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/world-cup-teams-tax-exemption-fifa-talks-us-treasury-federal-taxes\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/world-cup-teams-tax-exemption-fifa-talks-us-treasury-federal-taxes",
+      "pubDate": "2026-04-29 08:00:49",
+      "thumbnail": "https://i.guim.co.uk/img/media/516457880393178a2e45b3e9b50b4a1fda0afbce/710_245_1609_1288/master/1609.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=2e468518b1d7a52d3594589179ffdd1e",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "Michael Thomas, Sergio Agüero, Josh Stones: football’s latest title-winning goals | The Knowledge",
+      "description": "\n<p>Plus: dramatic late drops into the relegation zone, the Italia 90 XI and teams wearing away kits in finals</p>\n<ul><li><p><a href=\"mailto:knowledge@theguardian.com\">Mail us</a> with your all of your questions and answers</p></li></ul>\n<p><strong>“York City won the National League, and achieved promotion to the EFL, thanks to a goal from Josh Stones in the 103rd minute of their final game,”</strong> writes Eddie Giles.<strong> “Which players have scored the latest title-winning goals?”</strong></p>\n<p>In case you’ve been at a digital detox retreat for the past few days, York’s <strong>Josh Stones</strong> scored a 103rd-minute equaliser at Rochdale on Saturday to <a href=\"https://www.theguardian.com/football/2026/apr/25/york-city-promoted-back-to-football-league-as-106-point-rochdale-in-playoffs\">win the title and secure promotion to League Two</a>. Had Stones not scored, Emmanuel Dieseruvwe’s 95th-minute strike would have won the title for Rochdale.</p> <a href=\"https://www.theguardian.com/football/2026/apr/29/michael-thomas-sergio-aguero-josh-stones-footballs-latest-title-winning-goals\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/29/michael-thomas-sergio-aguero-josh-stones-footballs-latest-title-winning-goals",
+      "pubDate": "2026-04-29 07:00:48",
+      "thumbnail": "https://i.guim.co.uk/img/media/1dfa9544896a3db3048043858f194d44f8f0a7d0/0_0_5000_4000/master/5000.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=74ff0a6de829ea43f1054ad73099262a",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    },
+    {
+      "title": "‘We are not happy’: Chiamaka Nnadozie on Wafcon debacle, boomboxes and Brighton",
+      "description": "\n<p>The Brighton and Nigeria goalkeeper is highly critical of the decision to push back Wafcon, but still has hope for the future of the women’s game in Africa</p>\n<p>Chiamaka Nnadozie has, at the age of 25, earned her place in the pantheon of African goalkeepers alongside legends such as Cameroon’s Thomas N’Kono and Morocco’s Zaki Badou.</p>\n<p>Nnadozie featured at her first World Cup finals for Nigeria at 18, then played at the 2023 tournament and is the only goalkeeper to have won the Confederation of African Football’s (Caf’s) Golden Gloves award three times on the trot: in 2023, 2024 and 2025. Nnadozie, a reigning Women’s Africa Cup of Nations (Wafcon) champion, is delighted and amazed that she has come so far, so quickly.</p> <a href=\"https://www.theguardian.com/football/2026/apr/28/chiamaka-nnadozie-interview-wafcon-postponement-caf-nigeria-brighton-wsl\">Continue reading...</a>\n",
+      "link": "https://www.theguardian.com/football/2026/apr/28/chiamaka-nnadozie-interview-wafcon-postponement-caf-nigeria-brighton-wsl",
+      "pubDate": "2026-04-28 09:55:46",
+      "thumbnail": "https://i.guim.co.uk/img/media/61782212ab5fe5cfe114f580ddefe6177cb0e6b9/547_0_6830_5464/master/6830.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=eee42f33491353e5bfe8f75e05ed8ef2",
+      "sourceId": "guardian",
+      "sourceName": "Guardian"
+    }
+  ],
+  "lastFetch": "2026-04-29T12:24:22.374Z"
+}
